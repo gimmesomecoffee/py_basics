@@ -1,6 +1,11 @@
-with open("files/fruits.txt", "a+") as myfile:
-    myfile.write("\nOkra")
-    myfile.seek(0)
-    content = myfile.read()
+import time
+import os
+import pandas
 
-print(content)
+while True:
+    if os.path.exists("files/temps_today.csv"):
+        data = pandas.read_csv("files/temps_today.csv")
+        print(data.mean())
+    else:
+        print("File doesnt exist.")
+    time.sleep(10)
