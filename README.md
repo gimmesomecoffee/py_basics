@@ -3,6 +3,13 @@ I will put my notes here about python:
 
 Jupyter - It works locally on your computer and u can execute python commands there. 
 
+# f-strings
+It's a new string formatting, very handy.
+```
+num = 10
+print(f"2.25 times {num} is {2.25 * num:.2f})
+```
+Result will be: 22.50. To use f string formatting you need to put **f** before quote and in curly brackets put variables, methods or some math. You can also use formatting types, in our example I used **:.2f** It allowed me to precise how many decimal places I would have. To check whole list of formatting types, look for "formatting types python"
 ## Libraries
 - **Pandas** It is python library used for working with data sets, It has functions for analyzing, cleaning, exploring and manipulating data. <br>
 
