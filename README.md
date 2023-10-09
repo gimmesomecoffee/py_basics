@@ -27,3 +27,17 @@ iloc[] - we can filter data by this. We can use numbers of columns and rows or t
 ```
 df1.iloc[1:4,1:3]
 ```
+
+- **OpenCV** Python library used for working with images, it provides us tools to work with images, change their color, flip them, draw on them and many many more. <br>
+
+**How to use OpenCV**
+Image data has two dimensial array or function f(x,y)<br>
+img = cv2.imread('image.jpg', 1) - loading the image. Second argument is for type of colors, 0 is for black and white, 1 is for colorful img <br>
+img.imshow("Name of the window in which it will appear", img)  - showing the image, cv2.waitKey(0) - set up for how many seconds the image will show up, 0 is infinite <br>
+cv2.imwrite('newname.jpg', img) - create and save image with our name we put <br>
+cv2.resize(img,(1000,500)) - resizing the image, but better is resize based on image size, like this: cv2(resize(img, (img.shape[1]/2,img.shape[0]/2))) - we just resized our image, it will have half of size. <br>
+cv2.flip(img, 1) - it will flip the image
+cv2.blur(img,(15,15)) - it will blur the image. cv2.GaussianBlur(img, (7,7), 0) Gauss blur
+
+
+
