@@ -1,6 +1,8 @@
 #Step 4
 
+
 import random
+import os
 import hangman_art
 import hangman_words
 
@@ -23,6 +25,7 @@ for _ in range(word_length):
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
+    os.system('clear')
 
     #Check guessed letter
     for position in range(word_length):
@@ -38,8 +41,7 @@ while not end_of_game:
     #If lives goes down to 0 then the game should stop and it should print "You lose."
     if guess not in chosen_word:
         lives -= 1 
-        print(lives)
-    
+
     if lives == 0:
         print ("You lose")
         print(hangman_art.stages[0])
